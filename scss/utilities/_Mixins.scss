@@ -1,0 +1,9 @@
+@mixin boxmodel($BoxDisplay,$BoxWidth,$BoxMaxWidth,$Boxheight,$BoxMaxheight,$BoxPadding,$BoxMargin){
+    display: $BoxDisplay;
+    width: $BoxWidth;
+    max-width: $BoxMaxWidth;
+    height: $Boxheight;
+    max-height: $BoxMaxheight;
+    padding: $BoxPadding;
+    margin: $BoxMargin;
+}

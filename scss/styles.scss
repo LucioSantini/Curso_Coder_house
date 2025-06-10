@@ -1,0 +1,191 @@
+@import './utilities/Variables';
+@import './utilities/Mixins';
+
+@import './layout/nav';
+@import './layout/footer';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f0f0f0;
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+}
+
+
+/* nav ul{
+    display: flex;
+    justify-content: flex-end;
+} */
+
+
+
+h1{
+    text-align: center;
+    margin: 30px 0px;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px;
+}
+
+.h2_segundo{
+    text-align: left;
+    margin-left: 5%;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sections_principal{
+    @include boxmodel(flex,auto,35rem,auto,none,20px,50px 15%);
+    align-items: center;
+    gap: 20px;
+    background-color: $color_fondo_tarjetas;
+    border-radius: 1rem;
+}
+
+.sections_principal:nth-child(even){
+    flex-direction: row-reverse;
+    align-self: flex-end;
+}
+.sections_principal:nth-child(odd){
+    align-self: flex-start;
+}
+
+.sections_principal img{
+    width: 50%;
+    margin-right:20px ;
+    margin-bottom: 20px;
+    float: left;
+    border-radius: 1rem;
+}
+
+.sections_principal div{
+    width: 45%;
+}
+
+
+
+.sections_servicios{
+    @include boxmodel(inline-block,auto,20rem,auto,none,20px,10px 10px 10px 10%);
+    border-radius: 1rem;
+    background-color: $color_fondo_tarjetas;
+}
+
+.sections_servicios img{
+    width: 100%;
+}
+
+
+.sections_proyectos{
+    @include boxmodel(block,auto,20rem,auto,none,20px,10px 10px 10px 20%);
+    border-radius: 1rem;
+    background-color: $color_fondo_tarjetas;
+}
+
+.sections_proyectos img{
+    width: 100%;
+
+}
+
+.contact{
+    @include boxmodel(grid,60%,none,auto,none,30px,5%);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    /* grid-template-rows: 1fr 8fr 1fr; */
+    grid-template-rows: auto;
+    gap: 1rem;
+    background-color: rgb(66, 91, 92);
+    border-radius: 2rem;
+}
+
+input{
+    background-color: rgb(54, 54, 54);
+    color: #f0f0f0;
+    cursor: pointer;
+}
+
+.contact textarea{
+    background-color: rgb(54, 54, 54);
+    color: #f0f0f0;
+    resize: none;
+    min-height: 20rem;
+    width: 100%;
+}
+
+.contenedor_mensaje{
+    grid-column: 1 / -1;
+}
+
+.contenedor_boton{
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+#envio{
+    height: 3rem;
+    width: 6rem;
+}
+
+
+.consulta{
+    display: block;
+    margin: 1rem 0px;
+}
+
+
+@media only screen and (max-width: 576px) {
+    
+    .sections_principal {
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .sections_principal:nth-child(even){
+    flex-direction: column;
+    align-self: normal;
+    }
+    
+    .sections_principal:nth-child(odd){
+    flex-direction: column;
+    align-self: normal;
+    
+    }
+
+    .sections_principal div{
+        width: 100%;
+    }
+
+    .sections_proyectos{
+        overflow: hidden;
+    }
+
+    .contact{
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        
+    }
+
+    #email{
+        width: 100%;
+    }
+    
+    #numero{
+        width: 100%;
+    }
+
+
+}
