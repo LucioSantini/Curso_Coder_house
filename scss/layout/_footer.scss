@@ -1,6 +1,6 @@
 footer{
     margin-top: 130px;
-    background-color: rgb(66, 91, 92);
+    background-color: $color_dominante;
 
 }
 
@@ -14,7 +14,7 @@ footer li{
 }
 
 footer a{
-    color: #ffffff;
+    color: $color_blanco;
     font-size: 24px;
 }
 

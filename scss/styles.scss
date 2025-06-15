@@ -1,4 +1,5 @@
 @import './utilities/Variables';
+@import './utilities/extend';
 @import './utilities/Mixins';
 
 @import './layout/nav';
@@ -12,20 +13,12 @@
 }
 
 body{
-    background-color: #f0f0f0;
     background-image: url(../img/fondo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #ffffff;
+    color: $color_blanco;
 }
-
-
-/* nav ul{
-    display: flex;
-    justify-content: flex-end;
-} */
-
 
 
 h1{
@@ -55,8 +48,7 @@ h2 {
     @include boxmodel(flex,auto,35rem,auto,none,20px,50px 15%);
     align-items: center;
     gap: 20px;
-    background-color: $color_fondo_tarjetas;
-    border-radius: 1rem;
+    @extend %card-section;
 }
 
 .sections_principal:nth-child(even){
@@ -83,8 +75,7 @@ h2 {
 
 .sections_servicios{
     @include boxmodel(inline-block,auto,20rem,auto,none,20px,10px 10px 10px 10%);
-    border-radius: 1rem;
-    background-color: $color_fondo_tarjetas;
+    @extend %card-section;
 }
 
 .sections_servicios img{
@@ -94,8 +85,7 @@ h2 {
 
 .sections_proyectos{
     @include boxmodel(block,auto,20rem,auto,none,20px,10px 10px 10px 20%);
-    border-radius: 1rem;
-    background-color: $color_fondo_tarjetas;
+    @extend %card-section;
 }
 
 .sections_proyectos img{
@@ -106,22 +96,21 @@ h2 {
 .contact{
     @include boxmodel(grid,60%,none,auto,none,30px,5%);
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    /* grid-template-rows: 1fr 8fr 1fr; */
     grid-template-rows: auto;
     gap: 1rem;
-    background-color: rgb(66, 91, 92);
+    background-color: $color_dominante;
     border-radius: 2rem;
 }
 
 input{
     background-color: rgb(54, 54, 54);
-    color: #f0f0f0;
+    color: $color_blanco;
     cursor: pointer;
 }
 
 .contact textarea{
     background-color: rgb(54, 54, 54);
-    color: #f0f0f0;
+    color: $color_blanco;
     resize: none;
     min-height: 20rem;
     width: 100%;

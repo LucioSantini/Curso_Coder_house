@@ -1,3 +1,8 @@
+.sections_proyectos, .sections_servicios, .sections_principal {
+  border-radius: 1rem;
+  background-color: rgba(240, 240, 240, 0.267);
+}
+
 nav {
   background-color: rgb(66, 91, 92);
 }
@@ -9,6 +14,11 @@ nav a {
   padding: 5px;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 10%;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgb(119, 119, 119);
 }
 
 nav li {
@@ -33,7 +43,7 @@ footer li {
 }
 
 footer a {
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   font-size: 24px;
 }
 
@@ -50,18 +60,13 @@ footer p {
 }
 
 body {
-  background-color: #f0f0f0;
   background-image: url(../img/fondo.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
 }
 
-/* nav ul{
-    display: flex;
-    justify-content: flex-end;
-} */
 h1 {
   text-align: center;
   margin: 30px 0px;
@@ -95,8 +100,6 @@ h2 {
   margin: 50px 15%;
   align-items: center;
   gap: 20px;
-  background-color: rgba(240, 240, 240, 0.267);
-  border-radius: 1rem;
 }
 
 .sections_principal:nth-child(even) {
@@ -128,8 +131,6 @@ h2 {
   max-height: none;
   padding: 20px;
   margin: 10px 10px 10px 10%;
-  border-radius: 1rem;
-  background-color: rgba(240, 240, 240, 0.267);
 }
 
 .sections_servicios img {
@@ -144,8 +145,6 @@ h2 {
   max-height: none;
   padding: 20px;
   margin: 10px 10px 10px 20%;
-  border-radius: 1rem;
-  background-color: rgba(240, 240, 240, 0.267);
 }
 
 .sections_proyectos img {
@@ -161,7 +160,6 @@ h2 {
   padding: 30px;
   margin: 5%;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  /* grid-template-rows: 1fr 8fr 1fr; */
   grid-template-rows: auto;
   gap: 1rem;
   background-color: rgb(66, 91, 92);
@@ -170,13 +168,13 @@ h2 {
 
 input {
   background-color: rgb(54, 54, 54);
-  color: #f0f0f0;
+  color: rgb(255, 255, 255);
   cursor: pointer;
 }
 
 .contact textarea {
   background-color: rgb(54, 54, 54);
-  color: #f0f0f0;
+  color: rgb(255, 255, 255);
   resize: none;
   min-height: 20rem;
   width: 100%;
